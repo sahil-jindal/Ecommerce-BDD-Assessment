@@ -1,0 +1,118 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 32, Failures: 19, Errors: 0, Skipped: 0, Time elapsed: 479.819 s <<< FAILURE! - in TestSuite
+TestRunner.TestRunner.runScenario["Cart", "Cart feature"](1)  Time elapsed: 16.3 s  <<< FAILURE!
+java.lang.AssertionError: items move to cart failed
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Cart.user_clicks_on_move_to_cart(Cart.java:47)
+	at ✽.user clicks on move to cart(file:///D:/Downloads/SelAssessment/Features/Cart.feature:18)
+
+TestRunner.TestRunner.runScenario["Cart", "Cart feature"](2)  Time elapsed: 17.204 s  <<< FAILURE!
+java.lang.AssertionError: items move to cart failed
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Cart.user_clicks_on_move_to_cart(Cart.java:47)
+	at ✽.user clicks on move to cart(file:///D:/Downloads/SelAssessment/Features/Cart.feature:18)
+
+TestRunner.TestRunner.runScenario["Cart", "Cart feature"](3)  Time elapsed: 43.594 s  <<< FAILURE!
+java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:41)
+	at ✽.user will add to wishlist(file:///D:/Downloads/SelAssessment/Features/Cart.feature:13)
+
+TestRunner.TestRunner.runScenario["Validate menu item", "Menu Functionality"](6)  Time elapsed: 1.102 s  <<< FAILURE!
+java.lang.AssertionError: Exception in Validating Items
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.HeaderMenu.user_should_be_able_to_navigate_to_the_item_page(HeaderMenu.java:49)
+	at ✽.user should be able to navigate to the item page(file:///D:/Downloads/SelAssessment/Features/HeaderMenu.feature:11)
+
+TestRunner.TestRunner.runScenario["Validate menu item", "Menu Functionality"](8)  Time elapsed: 10.507 s  <<< FAILURE!
+java.lang.AssertionError: Header Category not selected
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.HeaderMenu.user_clicks_on_menu_bar_item(HeaderMenu.java:34)
+	at ✽.user clicks on menu bar item "invalid"(file:///D:/Downloads/SelAssessment/Features/HeaderMenu.feature:10)
+
+TestRunner.TestRunner.runScenario["Validate Products", "Menu Functionality"](11)  Time elapsed: 2.008 s  <<< FAILURE!
+java.lang.AssertionError: The product camera with 3D pixels given does not exist in category Kids Wear
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.HeaderMenu.validate_the_product_present_with_and_and(HeaderMenu.java:76)
+	at ✽.validate the product present with "camera with 3D pixels" and "$990.00" and "2569"(file:///D:/Downloads/SelAssessment/Features/HeaderMenu.feature:26)
+
+TestRunner.TestRunner.runScenario["Validate menu item", "Left Menu functionality"](14)  Time elapsed: 11.387 s  <<< FAILURE!
+java.lang.AssertionError: Left menu category not selected
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.LeftMenu.user_clicks_on_left_menu_item(LeftMenu.java:36)
+	at ✽.user clicks on left menu item "Furniture"(file:///D:/Downloads/SelAssessment/Features/LeftMenu.feature:11)
+
+TestRunner.TestRunner.runScenario["Validate menu item", "Left Menu functionality"](17)  Time elapsed: 11.485 s  <<< FAILURE!
+java.lang.AssertionError: Left menu category not selected
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.LeftMenu.user_clicks_on_left_menu_item(LeftMenu.java:36)
+	at ✽.user clicks on left menu item "invalid"(file:///D:/Downloads/SelAssessment/Features/LeftMenu.feature:11)
+
+TestRunner.TestRunner.runScenario["Order", "Order"](18)  Time elapsed: 24.011 s  <<< FAILURE!
+java.lang.AssertionError: items move to cart failed
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Cart.user_clicks_on_move_to_cart(Cart.java:47)
+	at ✽.user clicks on move to cart(file:///D:/Downloads/SelAssessment/Features/Order.feature:19)
+
+TestRunner.TestRunner.runScenario["Order", "Order"](19)  Time elapsed: 17.789 s  <<< FAILURE!
+java.lang.AssertionError: items move to cart failed
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Cart.user_clicks_on_move_to_cart(Cart.java:47)
+	at ✽.user clicks on move to cart(file:///D:/Downloads/SelAssessment/Features/Order.feature:19)
+
+TestRunner.TestRunner.runScenario["Order", "Order"](20)  Time elapsed: 17.874 s  <<< FAILURE!
+java.lang.AssertionError: items move to cart failed
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Cart.user_clicks_on_move_to_cart(Cart.java:47)
+	at ✽.user clicks on move to cart(file:///D:/Downloads/SelAssessment/Features/Order.feature:19)
+
+TestRunner.TestRunner.runScenario["Order", "Order"](21)  Time elapsed: 41.759 s  <<< FAILURE!
+java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:41)
+	at ✽.user will add to wishlist(file:///D:/Downloads/SelAssessment/Features/Order.feature:14)
+
+TestRunner.TestRunner.runScenario["Search for the Item", "Search for an Item"](22)  Time elapsed: 6.797 s  <<< FAILURE!
+java.lang.AssertionError: The search items retrieved do not match for the item : sony
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:81)
+	at ✽.user should be able to view the items "sony"(file:///D:/Downloads/SelAssessment/Features/Search.feature:14)
+
+TestRunner.TestRunner.runScenario["Search for the Item", "Search for an Item"](25)  Time elapsed: 14.954 s  <<< FAILURE!
+java.lang.AssertionError: category could not be selected properly
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Search.user_selects_category_as(Search.java:32)
+	at ✽.user selects category as "invalid"(file:///D:/Downloads/SelAssessment/Features/Search.feature:11)
+
+TestRunner.TestRunner.runScenario["Search for the Item", "Search for an Item"](26)  Time elapsed: 16.773 s  <<< FAILURE!
+java.lang.AssertionError: The search items retrieved do not match for the item : invalid
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:81)
+	at ✽.user should be able to view the items "invalid"(file:///D:/Downloads/SelAssessment/Features/Search.feature:14)
+
+TestRunner.TestRunner.runScenario["Search for the Item", "Search for an Item"](27)  Time elapsed: 16.951 s  <<< FAILURE!
+java.lang.AssertionError: The search items retrieved do not match for the item : 
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:81)
+	at ✽.user should be able to view the items ""(file:///D:/Downloads/SelAssessment/Features/Search.feature:14)
+
+TestRunner.TestRunner.runScenario["Wishlist", "Wishlist"](30)  Time elapsed: 29.486 s  <<< FAILURE!
+java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:41)
+	at ✽.user will add to wishlist(file:///D:/Downloads/SelAssessment/Features/Wishlisht.feature:13)
+
+TestRunner.TestRunner.runScenario["Wishlist", "Wishlist"](31)  Time elapsed: 29.35 s  <<< FAILURE!
+java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:41)
+	at ✽.user will add to wishlist(file:///D:/Downloads/SelAssessment/Features/Wishlisht.feature:13)
+
+TestRunner.TestRunner.runScenario["Wishlist", "Wishlist"](32)  Time elapsed: 23.432 s  <<< FAILURE!
+java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:110)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:41)
+	at ✽.user will add to wishlist(file:///D:/Downloads/SelAssessment/Features/Wishlisht.feature:16)
+

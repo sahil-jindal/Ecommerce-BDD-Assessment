@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 28 12:58:01 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>176 seconds (176414 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td><div><pre>java.lang.AssertionError: The product camera with 3D pixels given does not exist in category Mens Wear
+	at StepDefinitions.HeaderMenu.validate_the_product_present_with_and_and(HeaderMenu.java:80)
+	at ✽.validate the product present with &quot;camera with 3D pixels&quot; and &quot;$990.00&quot; and &quot;2569&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:28)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1380271191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1380271191'><pre>java.lang.AssertionError: The product camera with 3D pixels given does not exist in category Mens Wear
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.HeaderMenu.validate_the_product_present_with_and_and(HeaderMenu.java:80)
+	at ✽.validate the product present with &quot;camera with 3D pixels&quot; and &quot;$990.00&quot; and &quot;2569&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:28)
+</pre></div></td>
+<td>1</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td><div><pre>java.lang.AssertionError: The search items retrieved do not match for the item : sony
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;sony&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1729045606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1729045606'><pre>java.lang.AssertionError: The search items retrieved do not match for the item : sony
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;sony&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div></td>
+<td>6</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td><div><pre>java.lang.AssertionError: The order successful page not reached
+	at StepDefinitions.Order.user_will_buy_the_product(Order.java:66)
+	at ✽.user successfully places the order(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:23)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace7544750", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7544750'><pre>java.lang.AssertionError: The order successful page not reached
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Order.user_will_buy_the_product(Order.java:66)
+	at ✽.user successfully places the order(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:23)
+</pre></div></td>
+<td>14</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart", "Optional[Cart feature]"</td>
+<td></td>
+<td>17</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>1</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td></td>
+<td>14</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td></td>
+<td>17</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart", "Optional[Cart feature]"</td>
+<td></td>
+<td>18</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td></td>
+<td>6</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td></td>
+<td>16</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td></td>
+<td>6</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td></td>
+<td>14</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>1</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+</table><p>
+</body>
+</html>

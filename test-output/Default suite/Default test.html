@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/13/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 29 08:09:51 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>498 seconds (498800 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td><div><pre>java.lang.AssertionError: Left menu category not selected
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.LeftMenu.user_clicks_on_left_menu_item(LeftMenu.java:36)
+	at ✽.user clicks on left menu item &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/C)LeftMenu.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace11646065", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace11646065'><pre>java.lang.AssertionError: Left menu category not selected
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.LeftMenu.user_clicks_on_left_menu_item(LeftMenu.java:36)
+	at ✽.user clicks on left menu item &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/C)LeftMenu.feature:11)
+</pre></div></td>
+<td>10</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td><div><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace829239469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace829239469'><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:15)
+</pre></div></td>
+<td>27</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td><div><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1682431013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1682431013'><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:14)
+</pre></div></td>
+<td>38</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td><div><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace269902384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace269902384'><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:18)
+</pre></div></td>
+<td>30</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td><div><pre>java.lang.AssertionError: The search items retrieved do not match for the item : 
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1500820019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1500820019'><pre>java.lang.AssertionError: The search items retrieved do not match for the item : 
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div></td>
+<td>15</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart", "Optional[Cart feature]"</td>
+<td><div><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/E)Cart.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1285344791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1285344791'><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/E)Cart.feature:13)
+</pre></div></td>
+<td>38</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td><div><pre>java.lang.AssertionError: The search items retrieved do not match for the item : invalid
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1562057770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1562057770'><pre>java.lang.AssertionError: The search items retrieved do not match for the item : invalid
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div></td>
+<td>16</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td><div><pre>java.lang.AssertionError: The product camera with 3D pixels given does not exist in category Kids Wear
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.HeaderMenu.validate_the_product_present_with_and_and(HeaderMenu.java:78)
+	at ✽.validate the product present with &quot;camera with 3D pixels&quot; and &quot;$990.00&quot; and &quot;2569&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace487964833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace487964833'><pre>java.lang.AssertionError: The product camera with 3D pixels given does not exist in category Kids Wear
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.HeaderMenu.validate_the_product_present_with_and_and(HeaderMenu.java:78)
+	at ✽.validate the product present with &quot;camera with 3D pixels&quot; and &quot;$990.00&quot; and &quot;2569&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:28)
+</pre></div></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td><div><pre>java.lang.AssertionError: category could not be selected properly
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_selects_category_as(Search.java:37)
+	at ✽.user selects category as &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace679143692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace679143692'><pre>java.lang.AssertionError: category could not be selected properly
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_selects_category_as(Search.java:37)
+	at ✽.user selects category as &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:12)
+</pre></div></td>
+<td>12</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td><div><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2079743503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2079743503'><pre>java.lang.AssertionError: Exception in adding to wishlist
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Wishlist.user_will_add_to_wishlist(Wishlist.java:46)
+	at ✽.user will add to wishlist(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/D)Wishlisht.feature:15)
+</pre></div></td>
+<td>28</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td><div><pre>java.lang.AssertionError: The search items retrieved do not match for the item : sony
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;sony&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1845746463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1845746463'><pre>java.lang.AssertionError: The search items retrieved do not match for the item : sony
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Search.user_should_be_able_to_view_the_items(Search.java:84)
+	at ✽.user should be able to view the items &quot;sony&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/A)Search.feature:15)
+</pre></div></td>
+<td>6</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td><div><pre>java.lang.AssertionError: Header Category not selected
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.HeaderMenu.user_clicks_on_menu_bar_item(HeaderMenu.java:36)
+	at ✽.user clicks on menu bar item &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2002785788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2002785788'><pre>java.lang.AssertionError: Header Category not selected
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.HeaderMenu.user_clicks_on_menu_bar_item(HeaderMenu.java:36)
+	at ✽.user clicks on menu bar item &quot;invalid&quot;(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/B)HeaderMenu.feature:11)
+</pre></div></td>
+<td>10</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td><div><pre>java.lang.AssertionError: The order successful page not reached
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Order.user_will_buy_the_product(Order.java:66)
+	at ✽.user successfully places the order(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:23)
+</pre></div><a href='#' onClick='toggleBox("stack-trace274521953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace274521953'><pre>java.lang.AssertionError: The order successful page not reached
+	at org.testng.Assert.fail(Assert.java:99)
+	at StepDefinitions.Order.user_will_buy_the_product(Order.java:66)
+	at ✽.user successfully places the order(file:///C:/Users/NitishDosapati/eclipse-workspace2/SelAssessment/Features/F)Order.feature:23)
+</pre></div></td>
+<td>29</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td></td>
+<td>16</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td></td>
+<td>6</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart", "Optional[Cart feature]"</td>
+<td></td>
+<td>30</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td></td>
+<td>41</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order", "Optional[Order]"</td>
+<td></td>
+<td>41</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>1</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Left Menu functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Products", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate menu item", "Optional[Menu Functionality]"</td>
+<td></td>
+<td>0</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Wishlist", "Optional[Wishlist]"</td>
+<td></td>
+<td>15</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for the Item", "Optional[Search for an Item]"</td>
+<td></td>
+<td>7</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+<tr>
+<td title='TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart", "Optional[Cart feature]"</td>
+<td></td>
+<td>31</td>
+<td>TestRunner.TestRunner@d9345cd</td></tr>
+</table><p>
+</body>
+</html>
