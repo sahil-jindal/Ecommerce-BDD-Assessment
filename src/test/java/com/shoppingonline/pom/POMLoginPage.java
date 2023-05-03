@@ -3,7 +3,7 @@ package com.shoppingonline.pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class POMLogin {
+public class POMLoginPage {
 
     //Login credentials
     static final String user_email = "otheruser@gmail.com";
@@ -16,7 +16,7 @@ public class POMLogin {
 
     WebDriver driver;
 
-    public POMLogin(WebDriver driver) { this.driver = driver; }
+    public POMLoginPage(WebDriver driver) { this.driver = driver; }
 
     public void login() throws Exception {
         Thread.sleep(1000);

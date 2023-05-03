@@ -4,11 +4,11 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import com.shoppingonline.pom.POMElements;
 
 public class DriverLib {
 
     static WebDriver driver;
+    public static final String URL = "http://localhost/shoppingonline";
 
     public WebDriver getWebDriver() {
         if (driver == null) {
@@ -25,7 +25,7 @@ public class DriverLib {
         driver = new EdgeDriver(edgeOptions);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(POMElements.URL);
+        driver.get(URL);
         return driver;
     }
 }

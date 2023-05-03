@@ -14,7 +14,7 @@ Feature: Menu Functionality
       | item            |
       | Electronics     |
       | Kids Wear       |
-      | Furniture       |
+      | Furnitures      |
       | Home Appliances |
       | invalid         |
 

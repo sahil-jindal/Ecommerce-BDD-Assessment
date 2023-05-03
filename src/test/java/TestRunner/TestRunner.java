@@ -6,10 +6,5 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @Listeners(ListenerTest.class)
-@CucumberOptions(
-    features = "Features",
-    glue = "StepDefinitions"
-//	tags ="@Cart or @Order or @Wishlist or HeaderMenu or @LeftMenu or Search"
-//	tags = "@HeaderMenu"
-)
+@CucumberOptions(features = "Features", glue = "StepDefinitions")
 public class TestRunner extends AbstractTestNGCucumberTests {}

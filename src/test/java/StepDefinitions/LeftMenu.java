@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import static org.testng.Assert.fail;
 
+import com.shoppingonline.pom.POMProductsPage;
 import org.openqa.selenium.WebDriver;
 
 import com.shoppingonline.pom.POMLeftMenu;
@@ -15,8 +16,12 @@ public class LeftMenu {
 
     private final DriverLib LibDriver = new DriverLib();
     private final WebDriver driver = LibDriver.getWebDriver();
+
     private final POMLeftMenu lm = new POMLeftMenu(driver);
-    private String Count = "", Item = "";
+    private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
+
+    private String Count = "";
+    private String Item = "";
 
     @Given("user is running Left Menu functionality scenario")
     public void left_menu_functionality() {
@@ -29,7 +34,8 @@ public class LeftMenu {
         System.out.printf("| %-12s | %-40s |", "", "SELECT LEFT MENU CATEGORY");
         try {
             Item = item;
-            Count = lm.selectItem(Item);
+            pomProductsPage.setProductShowRange();
+            Count = lm.selectCategory(Item);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -43,7 +49,7 @@ public class LeftMenu {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE COUNT ON ITEM PAGE");
 
         try {
-            status = lm.validateSearchItem(Count);
+            status = pomProductsPage.validateSearchItem(Count);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");

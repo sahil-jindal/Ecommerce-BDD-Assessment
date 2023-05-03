@@ -15,7 +15,7 @@ Feature: Left Menu functionality
       | item            |
       | Electronics     |
       | Kids Wear       |
-      | Furniture       |
+      | Furnitures      |
       | Home Appliances |
       | Mens Wear       |
       | invalid         |

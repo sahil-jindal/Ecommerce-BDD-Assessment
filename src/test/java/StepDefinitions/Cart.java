@@ -1,24 +1,31 @@
 package StepDefinitions;
 
 import static org.testng.Assert.fail;
-import org.openqa.selenium.WebDriver;
+
+import com.shoppingonline.pom.POMNavbar;
+import com.shoppingonline.pom.POMWishList;
 import com.shoppingonline.pom.POMCart;
 import com.utitlity.DriverLib;
+
+import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Cart {
-
     private final DriverLib libDriver = new DriverLib();
     private final WebDriver driver = libDriver.getWebDriver();
+
     private final POMCart sc = new POMCart(driver);
+    private final POMNavbar pomNavbar = new POMNavbar(driver);
+    private final POMWishList pomWishList = new POMWishList(driver);
+
     public static String item1price = "";
     public static String item2price = "";
     public static int count = 0;
     static String finaltotal = "";
 
-    @Given("user is running  Cart scenario")
+    @Given("user is running Cart scenario")
     public void cart_scenario() {
         System.out.printf("-----------------------------------------------------------------------------------%n");
         System.out.printf("| %-12s | %-42s  %-7s %-12s |%n", "CART", "", "", "");
@@ -28,7 +35,7 @@ public class Cart {
     public void user_is_on_wishlist() {
         System.out.printf("| %-12s | %-40s |", "", "GO TO WISHLIST");
         try {
-            sc.goToWishList();
+            pomNavbar.goToWishList();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -40,7 +47,7 @@ public class Cart {
     public void user_clicks_on_move_to_cart() {
         System.out.printf("| %-12s | %-40s |", "", "MOVE TO CART");
         try {
-            sc.WishListToCart();
+            pomWishList.WishListToCart();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -52,7 +59,7 @@ public class Cart {
     public void user_clicks_on_edit_cart_button() {
         System.out.printf("| %-12s | %-40s |", "", "CLICK EDIT CART");
         try {
-            sc.goToEditCart();
+            pomNavbar.goToEditCart();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");

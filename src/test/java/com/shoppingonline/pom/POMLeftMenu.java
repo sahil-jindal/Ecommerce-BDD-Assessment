@@ -1,13 +1,14 @@
 package com.shoppingonline.pom;
 
-import java.util.List;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class POMLeftMenu {
+
+    static final String Aside_category2 = " (";
 
     WebDriver driver;
 
@@ -15,19 +16,17 @@ public class POMLeftMenu {
         this.driver = driver;
     }
 
-    public String selectItem(String item) {
-        new Select(driver.findElement(POMElements.Items_show_select)).selectByVisibleText("50");
-        driver.findElement(By.partialLinkText(item + POMElements.Aside_category2)).click();
-        String str = driver.findElement(By.partialLinkText(item + POMElements.Aside_category2)).getText();
-        // Replace "Something" with meaningful word
-        String[] something = str.split(" ");
-        int n = something.length;
-        String str1 = something[n - 1];
-        return str1.substring(1, str1.length() - 1);
+    public String selectCategory(String item) {
+        WebElement category = driver.findElement(By.partialLinkText(item + Aside_category2));
+        category.click();
+
+        String categoryText = category.getText();
+        Matcher matcher = Pattern.compile("\\((\\d+)\\)").matcher(categoryText);
+
+        if (!matcher.find())
+            return "0";
+
+        return matcher.group(1);
     }
 
-    public boolean validateSearchItem(String count) {
-        List<WebElement> ilist = driver.findElements(POMElements.Item_category_list);
-        return Integer.parseInt(count) == ilist.size();
-    }
 }

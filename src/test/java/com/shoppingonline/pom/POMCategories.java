@@ -1,55 +1,43 @@
 package com.shoppingonline.pom;
 
-import java.util.List;
-
+import java.util.HashMap;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class POMHeaderMenu {
+public class POMCategories {
+
+    static final By FurnitureHeader = By.xpath("//a[contains(text(),'Furnitures')]");
+    static final String Header_category1 = "//a[contains(text(),'";
+    static final String Header_category2 = "')]";
+
+    public static final HashMap<String, Integer> urlMap = new HashMap<>();
+
+    static {
+        urlMap.put("Electronics", 1);
+        urlMap.put("Kids Wear", 4);
+        urlMap.put("Furnitures", 5);
+        urlMap.put("Home Appliances", 6);
+        urlMap.put("Electronics Gadgets", 7);
+    }
 
     WebDriver driver;
 
-    public POMHeaderMenu(WebDriver driver) {
+    public POMCategories(WebDriver driver) {
         this.driver = driver;
     }
 
+    public void clickOnHeaderMenu() throws NoSuchElementException {
+        driver.findElement(FurnitureHeader).click();
+    }
+
     public void selectItem(String item) {
-        driver.findElement(By.xpath(POMElements.Header_category1 + item + POMElements.Header_category2)).click();
+        driver.findElement(By.xpath(Header_category1 + item + Header_category2)).click();
     }
 
     public boolean validateURL(String item) {
         String url = driver.getCurrentUrl();
         String id = url.substring(url.indexOf("=") + 1);
-        return POMElements.urlMap.get(item) == Integer.parseInt(id);
-    }
-
-    public boolean validateSearchItem(String name, String orderPrice, String discountPrice) {
-        boolean check = false;
-
-        List<WebElement> ilist = driver.findElements(POMElements.Item_name_list);
-        List<WebElement> prlist = driver.findElements(POMElements.Item_price_list);
-
-        for (int j = 0; j < ilist.size(); j++) {
-            int found = 0;
-
-            String itemName = ilist.get(j).getText().toUpperCase();
-            String itemorderPrice = prlist.get(j).getText();
-            String itemdiscountPrice = prlist.get(j).getText();
-
-            if (itemName.contains(name.toUpperCase()))
-                found = found + 1;
-
-            if (itemorderPrice.contains(orderPrice))
-                found = found + 1;
-
-            if (itemdiscountPrice.contains(discountPrice))
-                found = found + 1;
-
-            if (found == 3)
-                check = true;
-        }
-
-        return check;
+        return urlMap.get(item) == Integer.parseInt(id);
     }
 }

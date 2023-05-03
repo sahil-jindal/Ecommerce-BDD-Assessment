@@ -2,8 +2,9 @@ package StepDefinitions;
 
 import static org.testng.Assert.fail;
 
+import com.shoppingonline.pom.POMProductsPage;
 import org.openqa.selenium.WebDriver;
-import com.shoppingonline.pom.POMHeaderMenu;
+import com.shoppingonline.pom.POMCategories;
 import com.utitlity.DriverLib;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +14,8 @@ public class HeaderMenu {
 
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
-    private final POMHeaderMenu hm = new POMHeaderMenu(driver);
+    private final POMCategories hm = new POMCategories(driver);
+    private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
     private String Item = "";
 
     @Given("user is running menu functionality scenario")
@@ -62,7 +64,7 @@ public class HeaderMenu {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE PRODUCT");
 
         try {
-            status = hm.validateSearchItem(name, oprice, dprice);
+            status = pomProductsPage.validateSearchItem(name, oprice, dprice);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");

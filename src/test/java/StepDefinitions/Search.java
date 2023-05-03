@@ -1,8 +1,9 @@
 package StepDefinitions;
 
 import static org.testng.Assert.fail;
+import com.shoppingonline.pom.POMNavbar;
+import com.shoppingonline.pom.POMProductsPage;
 import org.openqa.selenium.WebDriver;
-import com.shoppingonline.pom.POMSearchItem;
 import com.utitlity.DriverLib;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,7 +13,8 @@ public class Search {
 
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
-    private final POMSearchItem si = new POMSearchItem(driver);
+    private final POMNavbar pomNavbar = new POMNavbar(driver);
+    private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
 
     @Given("user is running search scenario")
     public void search_scenario() {
@@ -25,7 +27,7 @@ public class Search {
         System.out.printf("| %-12s | %-40s |", "", "SELECT CATEGORY");
         try {
             Thread.sleep(2000);
-            si.selectCategory(catog);
+            pomNavbar.selectCategory(catog);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -39,7 +41,7 @@ public class Search {
 
         try {
             Thread.sleep(2000);
-            si.enterItem(item);
+            pomNavbar.enterItem(item);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -52,7 +54,8 @@ public class Search {
         System.out.printf("| %-12s | %-40s |", "", "SEARCH ITEM");
 
         try {
-            si.clickOnSearchButton();
+            pomProductsPage.setProductShowRange();
+            pomNavbar.clickOnSearchButton();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -66,7 +69,7 @@ public class Search {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE ON ITEM PAGE");
 
         try {
-            status = si.validateSearch(item);
+            status = pomProductsPage.validateSearch(item);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");
