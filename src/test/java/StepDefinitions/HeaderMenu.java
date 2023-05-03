@@ -2,10 +2,12 @@ package StepDefinitions;
 
 import static org.testng.Assert.fail;
 
-import com.shoppingonline.pom.POMProductsPage;
 import org.openqa.selenium.WebDriver;
+
 import com.shoppingonline.pom.POMCategories;
+import com.shoppingonline.pom.POMProductsPage;
 import com.utitlity.DriverLib;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,8 +16,10 @@ public class HeaderMenu {
 
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
-    private final POMCategories hm = new POMCategories(driver);
+    
+    private final POMCategories pomCategories = new POMCategories(driver);
     private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
+    
     private String Item = "";
 
     @Given("user is running menu functionality scenario")
@@ -27,8 +31,9 @@ public class HeaderMenu {
     @When("user clicks on menu bar item {string}")
     public void user_clicks_on_menu_bar_item(String item) {
         System.out.printf("| %-12s | %-40s |", "", "SELECT HEADER CATEGORY");
+        
         try {
-            hm.selectItem(item);
+            pomCategories.selectItem(item);
             Item = item;
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
@@ -43,13 +48,14 @@ public class HeaderMenu {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE ON ITEM PAGE");
 
         try {
-            status = hm.validateURL(Item);
+            status = pomCategories.validateURL(Item);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");
             System.out.printf("%-12s |%n", "FAILURE");
             fail("Exception in Validating Items");
         }
+        
         if (status) {
             System.out.printf("%-12s |%n", "SUCCESS");
         } else {
@@ -71,6 +77,7 @@ public class HeaderMenu {
             System.out.printf("%-12s |%n", "FAILURE");
             fail("Exception in Validating product");
         }
+        
         if (status) {
             System.out.printf("%-12s |%n", "SUCCESS");
         } else {

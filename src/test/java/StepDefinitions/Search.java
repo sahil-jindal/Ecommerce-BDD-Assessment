@@ -1,10 +1,13 @@
 package StepDefinitions;
 
 import static org.testng.Assert.fail;
+
+import org.openqa.selenium.WebDriver;
+
 import com.shoppingonline.pom.POMNavbar;
 import com.shoppingonline.pom.POMProductsPage;
-import org.openqa.selenium.WebDriver;
 import com.utitlity.DriverLib;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,6 +16,7 @@ public class Search {
 
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
+    
     private final POMNavbar pomNavbar = new POMNavbar(driver);
     private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
 
@@ -25,6 +29,7 @@ public class Search {
     @When("user selects category as {string}")
     public void user_selects_category_as(String catog) {
         System.out.printf("| %-12s | %-40s |", "", "SELECT CATEGORY");
+        
         try {
             Thread.sleep(2000);
             pomNavbar.selectCategory(catog);

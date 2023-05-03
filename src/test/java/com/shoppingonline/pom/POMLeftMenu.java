@@ -9,24 +9,24 @@ import org.openqa.selenium.WebElement;
 
 public class POMLeftMenu {
 
-    static final String Aside_category2 = " (";
+	static final String Aside_category2 = " (";
 
-    WebDriver driver;
+	WebDriver driver;
 
-    public POMLeftMenu(WebDriver driver) {
-        this.driver = driver;
-    }
+	public POMLeftMenu(WebDriver driver) {
+		this.driver = driver;
+	}
 
-    public String selectCategory(String item) {
-        WebElement category = driver.findElement(By.partialLinkText(item + Aside_category2));
-        category.click();
+	public String selectCategory(String item) {
+		WebElement category = driver.findElement(By.partialLinkText(item + Aside_category2));
+		category.click();
 
-        String categoryText = category.getText();
-        Matcher matcher = Pattern.compile("\\((\\d+)\\)").matcher(categoryText);
+		String categoryText = category.getText();
+		Matcher matcher = Pattern.compile("\\((\\d+)\\)").matcher(categoryText);
 
-        if (!matcher.find())
-            return "0";
+		if (!matcher.find())
+			return "0";
 
-        return matcher.group(1);
-    }
+		return matcher.group(1);
+	}
 }

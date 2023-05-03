@@ -17,15 +17,15 @@ public class Hooks {
 
     static DriverLib libDriver = new DriverLib();
     static WebDriver driver = libDriver.getWebDriver();
+    
+    static POMAccount pomAccount = new POMAccount(driver);
+    static POMNavbar pomNavbar = new POMNavbar(driver);
+    static POMLoginPage pomLoginPage = new POMLoginPage(driver);
+    static POMWishList pomWishList = new POMWishList(driver);
+    static POMCart pomCart = new POMCart(driver);
 
     @BeforeAll
     public static void beforeAll() {
-        POMAccount pomAccount = new POMAccount(driver);
-        POMNavbar pomNavbar = new POMNavbar(driver);
-        POMLoginPage pomLoginPage = new POMLoginPage(driver);
-        POMWishList pomWishList = new POMWishList(driver);
-        POMCart pomCart = new POMCart(driver);
-
         try {
             System.out.printf("-----------------------------------------------------------------------------------%n");
             System.out.printf("| %-55s |", "CLEANUP PROCESS BEFORE TEST SUITE");
@@ -41,6 +41,7 @@ public class Hooks {
             System.out.printf(" %-7s |%-12s |%n", "", "FAILURE");
             fail("failed in cleanup process before tests execution");
         }
+        
         System.out.printf("-----------------------------------------------------------------------------------%n");
         System.out.printf("| %-12s | %-40s | %-7s |%-12s |%n", "TEST", "STEPS", "RESULT", "VALIDATION");
     }
@@ -49,9 +50,7 @@ public class Hooks {
     public void cleanupWishlist() {
         try {
             System.out.printf("| %-12s | %-40s |", "", "CLEANUP WISHLIST");
-            POMNavbar pomNavbar = new POMNavbar(driver);
             pomNavbar.goToWishList();
-            POMWishList pomWishList = new POMWishList(driver);
             pomWishList.cleanUpWishlist();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
@@ -63,7 +62,6 @@ public class Hooks {
     public void logout() {
         try {
             System.out.printf("| %-12s | %-40s |", "", "LOGOUT");
-            POMAccount pomAccount = new POMAccount(driver);
             pomAccount.logout();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
             System.out.printf("-----------------------------------------------------------------------------------%n");
@@ -77,7 +75,6 @@ public class Hooks {
     public void cleanCart() {
         try {
             System.out.printf("| %-12s | %-40s |", "", "CLEANUP CART");
-            POMCart pomCart = new POMCart(driver);
             pomCart.cleanUpCart();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
