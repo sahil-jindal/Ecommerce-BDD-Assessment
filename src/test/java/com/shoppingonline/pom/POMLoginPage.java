@@ -16,7 +16,9 @@ public class POMLoginPage {
 
     WebDriver driver;
 
-    public POMLoginPage(WebDriver driver) { this.driver = driver; }
+    public POMLoginPage(WebDriver driver) { 
+        this.driver = driver; 
+    }
 
     public void login() throws Exception {
         Thread.sleep(1000);
