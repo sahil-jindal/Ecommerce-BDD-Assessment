@@ -26,7 +26,7 @@ public class Order {
     @When("user clicks on checkout button")
     public void user_clicks_on_checkout_button() {
         System.out.printf("| %-12s | %-40s |", "", "CHECKOUT FROM CART");
-        
+
         try {
             pomOrder.clickOnCheckout();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
@@ -37,13 +37,14 @@ public class Order {
     }
 
     @When("user will fill the card details as {string} {string} {string} {string} {string} {string} {string} {string} {string} {string}")
-    public void user_will_fill_the_card_details_as(String fname, String email, String address, String city, 
-    		String state, String zip, String name_on_card, String card_no, String expdate, String cvv) {
-        
-    	System.out.printf("| %-12s | %-40s |", "", "PLACE THE ORDER");
-        
-    	try {
-            pomOrder.enterDetailsAndPlaceOrder(fname, email, address, city, state, zip, name_on_card, card_no, expdate, cvv);
+    public void user_will_fill_the_card_details_as(String fname, String email, String address, String city,
+            String state, String zip, String name_on_card, String card_no, String expdate, String cvv) {
+
+        System.out.printf("| %-12s | %-40s |", "", "PLACE THE ORDER");
+
+        try {
+            pomOrder.enterDetailsAndPlaceOrder(fname, email, address, city, state, zip, name_on_card, card_no, expdate,
+                    cvv);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -55,7 +56,7 @@ public class Order {
     public void user_will_buy_the_product() {
         boolean status = false;
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE PLACE ORDER");
-        
+
         try {
             status = pomOrder.checkOrderSuccessful();
             System.out.printf(" %-7s |", "PASS");
@@ -64,7 +65,7 @@ public class Order {
             System.out.printf("%-12s |%n", "FAILURE");
             fail("Exception in validating place order");
         }
-        
+
         if (status) {
             System.out.printf("%-12s |%n", "SUCCESS");
         } else {
@@ -78,7 +79,7 @@ public class Order {
         boolean status = false;
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE ON ORDER PAGE");
 
-		try {
+        try {
             status = pomOrder.validateOrder(Wishlist.Item1, Wishlist.Item2);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {

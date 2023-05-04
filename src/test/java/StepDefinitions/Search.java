@@ -16,7 +16,7 @@ public class Search {
 
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
-    
+
     private final POMNavbar pomNavbar = new POMNavbar(driver);
     private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
 
@@ -29,7 +29,7 @@ public class Search {
     @When("user selects category as {string}")
     public void user_selects_category_as(String catog) {
         System.out.printf("| %-12s | %-40s |", "", "SELECT CATEGORY");
-        
+
         try {
             Thread.sleep(2000);
             pomNavbar.selectCategory(catog);
@@ -90,4 +90,4 @@ public class Search {
         }
     }
 
-}	
+}

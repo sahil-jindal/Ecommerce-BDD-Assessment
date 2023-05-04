@@ -18,7 +18,7 @@ public class Hooks {
 
     static DriverLib libDriver = new DriverLib();
     static WebDriver driver = libDriver.getWebDriver();
-    
+
     static POMAccount pomAccount = new POMAccount(driver);
     static POMNavbar pomNavbar = new POMNavbar(driver);
     static POMLoginPage pomLoginPage = new POMLoginPage(driver);
@@ -42,7 +42,7 @@ public class Hooks {
             System.out.printf(" %-7s |%-12s |%n", "", "FAILURE");
             fail("failed in cleanup process before tests execution");
         }
-        
+
         System.out.printf("-----------------------------------------------------------------------------------%n");
         System.out.printf("| %-12s | %-40s | %-7s |%-12s |%n", "TEST", "STEPS", "RESULT", "VALIDATION");
     }
