@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import StepDefinitions.Cart;
-import StepDefinitions.Wishlist;
+import stepdefinitions.Cart;
+import stepdefinitions.Wishlist;
 
 public class POMCart {
 
