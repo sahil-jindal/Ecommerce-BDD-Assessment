@@ -18,7 +18,7 @@ public class Wishlist {
     private final DriverLib driverLib = new DriverLib();
     private final WebDriver driver = driverLib.getWebDriver();
 
-    private final POMWishList wl = new POMWishList(driver);
+    private final POMWishList pomWishList = new POMWishList(driver);
     private final POMNavbar pomNavbar = new POMNavbar(driver);
     private final POMProductsPage pomProductsPage = new POMProductsPage(driver);
 
@@ -57,7 +57,7 @@ public class Wishlist {
 
         try {
             pomNavbar.goToWishList();
-            status = wl.validateWishlist(Item1, Item2);
+            status = pomWishList.validateWishlist(Item1, Item2);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +79,7 @@ public class Wishlist {
         System.out.printf("| %-12s | %-40s |", "", "UPDATE IN WISHLIST");
 
         try {
-            wl.removeFromWishlist(item1);
+            pomWishList.removeFromWishlist(item1);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -94,7 +94,7 @@ public class Wishlist {
 
         try {
             pomNavbar.goToWishList();
-            status = wl.validateWishlist(Item2);
+            status = pomWishList.validateWishlist(Item2);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             e.printStackTrace();
