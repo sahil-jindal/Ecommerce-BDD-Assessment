@@ -71,6 +71,7 @@ public class POMOrder {
 	public boolean validateOrder(String item1, String item2) throws Exception {
 		driver.findElement(Order_page).click();
 		Thread.sleep(1000);
+
 		List<WebElement> ilist = driver.findElements(Order_Item_name);
 
 		int count = 0;

@@ -20,12 +20,11 @@ public class DriverLib {
 	}
 
 	private WebDriver startWebDriver() {
-		WebDriver driver;
 		EdgeOptions edgeOptions = new EdgeOptions();
 		edgeOptions.addArguments("--remote-allow-origins=*");
-		driver = new EdgeDriver(edgeOptions);
+		WebDriver driver = new EdgeDriver(edgeOptions);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(URL);
 		return driver;
 	}

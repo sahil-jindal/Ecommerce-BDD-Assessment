@@ -39,11 +39,10 @@ public class Wishlist {
 		try {
 			if(itemcount == 1) {
 				Item1 = pomProductsPage.addToWishlist();
-				++itemcount;
 			} else {
 				Item2 = pomProductsPage.addToWishlist();
-				++itemcount;
 			}
+			++itemcount;
 			System.out.printf(" %-7s |%-12s |%n", "PASS", "");
 		} catch (Exception e) {
 			System.out.printf(" %-7s |%-12s |%n", "FAIL", "");

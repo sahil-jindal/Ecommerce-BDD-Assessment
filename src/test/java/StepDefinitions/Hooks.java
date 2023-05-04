@@ -2,14 +2,15 @@ package StepDefinitions;
 
 import static org.testng.Assert.fail;
 
+import org.openqa.selenium.WebDriver;
+
 import com.shoppingonline.pom.POMAccount;
 import com.shoppingonline.pom.POMCart;
 import com.shoppingonline.pom.POMLoginPage;
 import com.shoppingonline.pom.POMNavbar;
 import com.shoppingonline.pom.POMWishList;
-
-import org.openqa.selenium.WebDriver;
 import com.utitlity.DriverLib;
+
 import io.cucumber.java.After;
 import io.cucumber.java.BeforeAll;
 

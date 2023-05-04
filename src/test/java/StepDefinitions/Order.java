@@ -13,9 +13,9 @@ import io.cucumber.java.en.When;
 public class Order {
 
     private final DriverLib driverLib = new DriverLib();
-    
     private final WebDriver driver = driverLib.getWebDriver();
-    private final POMOrder oc = new POMOrder(driver);
+
+    private final POMOrder pomOrder = new POMOrder(driver);
 
     @Given("user is running  Order scenario")
     public void order_scenario() {
@@ -28,7 +28,7 @@ public class Order {
         System.out.printf("| %-12s | %-40s |", "", "CHECKOUT FROM CART");
         
         try {
-            oc.clickOnCheckout();
+            pomOrder.clickOnCheckout();
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -43,7 +43,7 @@ public class Order {
     	System.out.printf("| %-12s | %-40s |", "", "PLACE THE ORDER");
         
     	try {
-            oc.enterDetailsAndPlaceOrder(fname, email, address, city, state, zip, name_on_card, card_no, expdate, cvv);
+            pomOrder.enterDetailsAndPlaceOrder(fname, email, address, city, state, zip, name_on_card, card_no, expdate, cvv);
             System.out.printf(" %-7s |%-12s |%n", "PASS", "");
         } catch (Exception e) {
             System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
@@ -57,7 +57,7 @@ public class Order {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE PLACE ORDER");
         
         try {
-            status = oc.checkOrderSuccessful();
+            status = pomOrder.checkOrderSuccessful();
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");
@@ -79,7 +79,7 @@ public class Order {
         System.out.printf("| %-12s | %-40s |", "", "VALIDATE ON ORDER PAGE");
 
 		try {
-            status = oc.validateOrder(Wishlist.Item1, Wishlist.Item2);
+            status = pomOrder.validateOrder(Wishlist.Item1, Wishlist.Item2);
             System.out.printf(" %-7s |", "PASS");
         } catch (Exception e) {
             System.out.printf(" %-7s |", "FAIL");

@@ -29,17 +29,19 @@ public class POMProductsPage {
 		List<WebElement> ilist = driver.findElements(Item_name_list);
 		List<WebElement> prlist = driver.findElements(Item_price_list);
 
+		boolean check = false;
+
 		for (int j = 0; j < ilist.size(); j++) {
 			String itemName = ilist.get(j).getText().toUpperCase();
-			String itemorderPrice = prlist.get(j).getText();
-			String itemdiscountPrice = prlist.get(j).getText();
+			String itemOrderPrice = prlist.get(j).getText();
+			String itemDiscountPrice = prlist.get(j).getText();
 
 			if (itemName.contains(name.toUpperCase()) && 
-				itemorderPrice.contains(orderPrice) && 
-				itemdiscountPrice.contains(discountPrice)) return true;
+				itemOrderPrice.contains(orderPrice) &&
+				itemDiscountPrice.contains(discountPrice)) check = true;
 		}
 
-		return false;
+		return check;
 	}
 
 	public boolean validateSearch(String item) {
