@@ -24,7 +24,7 @@ public class Wishlist {
 
 	public static String Item1 = "";
 	public static String Item2 = "";
-	static int itemcount = 0;
+	static int itemcount = 1;
 
 	@Given("user is running Wishlist scenario")
 	public void wishlist_scenario() {
@@ -37,10 +37,13 @@ public class Wishlist {
 		System.out.printf("| %-12s | %-40s |", "", "ADD TO WISHLIST");
 
 		try {
-			Item1 = pomProductsPage.addToWishlist();
-			++itemcount;
-			Item2 = pomProductsPage.addToWishlist();
-			++itemcount;
+			if(itemcount == 1) {
+				Item1 = pomProductsPage.addToWishlist();
+				++itemcount;
+			} else {
+				Item2 = pomProductsPage.addToWishlist();
+				++itemcount;
+			}
 			System.out.printf(" %-7s |%-12s |%n", "PASS", "");
 		} catch (Exception e) {
 			System.out.printf(" %-7s |%-12s |%n", "FAIL", "");
